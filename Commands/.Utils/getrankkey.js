@@ -12,7 +12,9 @@ module.exports = {
                 .setMinValue(1)
                 .setRequired(false)),
     async execute(interaction) {
+        const iuser = await interaction.guild.members.fetch(interaction.user.id)
         await interaction.deferReply()
+        
         const FooterEmbeds_ = FooterEmbeds
 
         var page = interaction.options.getNumber('page')

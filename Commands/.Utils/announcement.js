@@ -13,6 +13,7 @@ module.exports = {
                 .setRequired(true)),
     async execute(interaction) {
         const FooterEmbeds_ = FooterEmbeds
+        await interaction.deferReply()
 
         const channel = interaction.options.getChannel('channel')
         const iuser = await interaction.guild.members.fetch(interaction.user.id)
@@ -130,13 +131,13 @@ module.exports = {
                     .setTitle('<:OrinBruh:1160295126996881448> **Lỗi Submit Modal**')
                     .setDescription('Uhh, Lỗi Submit Modal Rồi, Có 2 Nguyên Nhân Sau:\n1. Hết Giờ Kìa Ba, Nhập Lại Đê :V\n> 2. Lỗi Code, Pha Này Gọi Chủ Bot Lên Nhá :V')
                     .setTimestamp()
-                await interaction.reply({
+                await interaction.editReply({
                     embeds: [ErrEmbed],
                 })
                 console.error(error)
             }
         } else {
-            interaction.reply({
+            interaction.editReply({
                 embeds: [NoPerm]
             })
         }

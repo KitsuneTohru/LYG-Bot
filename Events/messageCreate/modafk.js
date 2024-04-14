@@ -1,5 +1,7 @@
 const { Client, Message } = require('discord.js')
+const wait = require('node:timers/promises').setTimeout;
 const chalk = require('chalk')
+const AdminAFK = require('../../Database/adminafklist')
 /**
  * 
  * @param {Client} client 
@@ -18,13 +20,32 @@ module.exports = async (client, message) => {
         return
     } else {
         const member = await message.guild.members.fetch(mentioned)
-        const status = member.presence.status || 'offline'
-        console.log(`${chalk.blueBright('[DEBUG]')} ${member.user.username}'s Status: ${status}`)
-        if (member.roles.cache.has('900747529384247336') && status === 'dnd') {
-            message.channel.send(`<:MioYamero:1153319903441461319> ${message.member}, Oi! Bạn Ping Một Người Trong \`PCB Team\` (${member.user.username}) Thế Này Lúc Họ Bận Hay AFK... Nếu Họ Cáu Thì Bạn Tính Sao?`)
+        let status = member.presence?.status ?? 'offline'
+        if (status === null) {
+            status = 'offline'
         }
-        if (member.roles.cache.has('900747529384247336') && status === 'offline') {
-            message.channel.send(`<:MioYamero:1153319903441461319> ${message.member}, Oi! Bạn Ping Một Người Trong \`PCB Team\` (${member.user.username}) Thế Này Lúc Họ Bận Hay AFK... Nếu Họ Cáu Thì Bạn Tính Sao?`)
-        }
+
+        AdminAFK.findOne({ UserID: member.id }, async (err, data) => {
+            if (err) throw err
+            if (!data) return console.log(`${chalk.blueBright('[DEBUG]')} ${member.user.username}'s Status: ${status} Trạng Thái AFK: ${key}`)
+            if (data) {
+                let key = data.Key
+                await wait(500)
+                console.log(`${chalk.blueBright('[DEBUG]')} ${member.user.username}'s Status: ${status} Trạng Thái AFK: ${key}`)
+                switch (status) {
+                    case 'dnd':
+                    case 'offline':
+                        {
+                            if (member.roles.cache.has('900747529384247336') && key)
+                                message.channel.send(`<:MioYamero:1153319903441461319> ${message.member}, Oi! Bạn Ping Một Người Trong \`PCB Team\` (${member.user.username}) Thế Này Lúc Họ Bận Hay AFK... Nếu Họ Cáu Thì Bạn Tính Sao?`)
+                        }
+                    default:
+                        {
+                            console.log(`${chalk.blueBright('[DEBUG]')} ${member.user.username}'s Status: ${status} Trạng Thái AFK: ${key}`)
+                        }
+                }
+            }
+        })
+
     }
 }

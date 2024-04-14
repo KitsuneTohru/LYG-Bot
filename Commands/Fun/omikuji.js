@@ -27,10 +27,19 @@ module.exports = {
 
         function DailyCD() {
             var CD = new Date(Date.now())
-            CD.setDate(CD.getDate() + 1)
-            CD.setHours(5, 0, 0, 0)
-
-            const Daily_CD = CD.getTime()
+            var PreCD = new Date(Date.now())
+            var Daily_CD
+            if (PreCD.getHours() >= 4) {
+                CD.setDate(CD.getDate() + 1)
+                CD.setHours(5, 0, 0, 0)
+                Daily_CD = CD.getTime()
+            } else {
+                Daily_CD = new Date(Date.now())
+                Daily_CD.setHours(5, 0, 0, 0)
+                Daily_CD = Daily_CD.getTime()
+            }
+            console.log(chalk.cyanBright('[DEBUG]'), PreCD.getHours(), PreCD.getDate(), CD.getHours(), CD.getDate())
+            console.log(chalk.cyanBright('[DEBUG]'), Daily_CD)
             return Daily_CD
         }
         const Daily_CD = DailyCD()

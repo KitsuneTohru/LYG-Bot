@@ -7,6 +7,7 @@ const rankingarr = [
         'chen', 'koishi', 'patchouli',
         'shinki', 'aya', 'sakuya', 
         'fubuki', 'tenshi', 'shiroko',
+        'sparkle', 
     ],
     [
         '#FFFFFF', '#FF6366', '#00D309',
@@ -15,7 +16,8 @@ const rankingarr = [
         '#F2D337', '#FF94FA', '#EDFFFE',
         '#965959', '#75FFC6', '#D490FF',
         '#FFF8F8', '#E55A45', '#bcdada', 
-        '#00FFFF',  '#64FFF1', '#aff5f6'
+        '#00FFFF',  '#64FFF1', '#aff5f6',
+        '#e63333', 
     ],
     [
         './Assets/RankCards/RankCard_0.png',
@@ -39,6 +41,7 @@ const rankingarr = [
         './Assets/RankCards/RankCard_18.png',
         './Assets/RankCards/RankCard_19.png',
         './Assets/RankCards/RankCard_20.png',
+        './Assets/RankCards/RankCard_21.png'
     ],
     [
         'Basic Member Of Lazy Gang',
@@ -62,6 +65,7 @@ const rankingarr = [
         'Shirakami Fubuki - Kon Kon Kitsune!',
         'Tenshi - Uchouten Dreamers',
         'Shiroko - Neko-rin\'s Summer Arc 2023',
+        'Sparkle - Amusement Is My Life',
     ],
     [
         'https://cdn.discordapp.com/emojis/1097172753985056859.png',
@@ -85,6 +89,8 @@ const rankingarr = [
         'https://cdn.discordapp.com/emojis/1190535308639473705.png',
         'https://cdn.discordapp.com/emojis/1205836795527569469.png',
         'https://cdn.discordapp.com/emojis/1206633868271030332.png',
+        'https://cdn.discordapp.com/emojis/1208759255482634311.png',
+
     ],
     [
         '<:LYG_blank:1097172753985056859>',
@@ -108,6 +114,8 @@ const rankingarr = [
         '<:FubukiBliss:1190535308639473705>',
         '<:TenshiSmug:1205836795527569469>',
         '<:ShirokoSip:1206633868271030332>',
+        '<:SparkleLit:1208759255482634311>',
+
     ],
 ]
 /*rankingarr

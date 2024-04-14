@@ -74,7 +74,7 @@ module.exports = {
                         .setDescription(`[PNG Format](${user.displayAvatarURL({ dynamic: true, size: 512, extension: 'png' })}) • [JPG Format](${user.displayAvatarURL({ dynamic: true, size: 512, extension: 'jpg' })}) • [WEBP Format](${user.displayAvatarURL({ dynamic: true, size: 512, extension: 'webp' })})\n<a:OrinSway:1160295722009251870> **(User: ${user})**`)
                         .setColor('Blue')
                         .setTimestamp()
-                        .setImage(`${user.displayAvatarURL({ dynamic: true, size: 512 })}`)
+                        .setImage(`${user.displayAvatarURL({ dynamic: true, size: 2048, extension: 'png' })}`)
                         .setFooter({ text: `${FooterEmbeds_[0][0]}`, iconURL: `${FooterEmbeds_[1][Math.floor(Math.random() * FooterEmbeds_[1].length)]}` })
                     await interaction.editReply({
                         embeds: [user_embed]
