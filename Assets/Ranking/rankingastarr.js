@@ -7,7 +7,7 @@ const rankingarr = [
         'chen', 'koishi', 'patchouli',
         'shinki', 'aya', 'sakuya', 
         'fubuki', 'tenshi', 'shiroko',
-        'sparkle', 
+        'sparkle', 'hoshino'
     ],
     [
         '#FFFFFF', '#FF6366', '#00D309',
@@ -16,8 +16,8 @@ const rankingarr = [
         '#F2D337', '#FF94FA', '#EDFFFE',
         '#965959', '#75FFC6', '#D490FF',
         '#FFF8F8', '#E55A45', '#bcdada', 
-        '#00FFFF',  '#64FFF1', '#aff5f6',
-        '#e63333', 
+        '#00FFFF', '#64FFF1', '#aff5f6',
+        '#e63333', '#F2ABF5'
     ],
     [
         './Assets/RankCards/RankCard_0.png',
@@ -41,31 +41,33 @@ const rankingarr = [
         './Assets/RankCards/RankCard_18.png',
         './Assets/RankCards/RankCard_19.png',
         './Assets/RankCards/RankCard_20.png',
-        './Assets/RankCards/RankCard_21.png'
+        './Assets/RankCards/RankCard_21.png',
+        './Assets/RankCards/RankCard_22.png'
     ],
     [
-        'Basic Member Of Lazy Gang',
-        'Rin (Orin) • Touhou Addict',
-        'Utsuho (Ginn) • Touch Grass God',
-        'Flandre (IC) • Basement HikiNEET',
-        'Satori (Yamai) • Introvert "IELTS 8.0"',
-        'Marisa (Lemon) • Love Colored Master Spark',
-        'Remilia (Watson) • Scarlet Police Here',
-        'Seiran (Hans) • Karuta Addict',
-        'Yukari (Yukari) • The Old Lazy Hag',
-        'Ran (Ran) • The Testing Fox',
-        'Lazy Gang - PCB: Admin',
-        'Lazy Gang - PCB: Mod',
-        'Lazy Gang - PCB: Staff',
-        'Former PCB Team Member',
-        'Patchouli - The Knowledge Of LYG',
-        'Shinki - The Makai God',
-        'Aya - The Fastest Speed Breaker',
-        'Sakuya - Head Maid Of Devil Mansion',
-        'Shirakami Fubuki - Kon Kon Kitsune!',
-        'Tenshi - Uchouten Dreamers',
-        'Shiroko - Neko-rin\'s Summer Arc 2023',
-        'Sparkle - Amusement Is My Life',
+        'Member - No Title',
+        'Touhou - Kaenbyou Rin',
+        'Touhou - Reiuji Utshuho',
+        'Touhou - Scarlet Flandre',
+        'Touhou - Komeiji Satori',
+        'Touhou - Kirisame Marisa',
+        'Touhou - Scarlet Remilia',
+        'Touhou - Seiran',
+        'Touhou - Yakumo Yukari',
+        'Touhou - Yakumo Ran',
+        'Touhou - Saigyouji Yuyuko (Admin)',
+        'Touhou - Konpaku Youmu (Mod)',
+        'Touhou - Chen (Staff)',
+        'Touhou - Komeiji Koishi (OG PCB)',
+        'Touhou - Patchouli Knowledge',
+        'Touhou - Shinki',
+        'Touhou - Shameimaru Aya',
+        'Touhou - Izayoi Sakuya',
+        'Hololive - Shirakami Fubuki',
+        'Touhou - Hinanawi Tenshi',
+        'Abydos - Sunaookami Shiroko',
+        'HSR - Sparkle',
+        'Abydos - Takanashi Hoshino'
     ],
     [
         'https://cdn.discordapp.com/emojis/1097172753985056859.png',
@@ -90,7 +92,7 @@ const rankingarr = [
         'https://cdn.discordapp.com/emojis/1205836795527569469.png',
         'https://cdn.discordapp.com/emojis/1206633868271030332.png',
         'https://cdn.discordapp.com/emojis/1208759255482634311.png',
-
+        'https://cdn.discordapp.com/emojis/1229126728417280050.png',
     ],
     [
         '<:LYG_blank:1097172753985056859>',
@@ -115,7 +117,7 @@ const rankingarr = [
         '<:TenshiSmug:1205836795527569469>',
         '<:ShirokoSip:1206633868271030332>',
         '<:SparkleLit:1208759255482634311>',
-
+        '<:HoshinoSleep:1229126728417280050>',
     ],
 ]
 /*rankingarr
