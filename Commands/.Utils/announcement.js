@@ -13,7 +13,6 @@ module.exports = {
                 .setRequired(true)),
     async execute(interaction) {
         const FooterEmbeds_ = FooterEmbeds
-        await interaction.deferReply()
 
         const channel = interaction.options.getChannel('channel')
         const iuser = await interaction.guild.members.fetch(interaction.user.id)
@@ -79,7 +78,7 @@ module.exports = {
                 const modalResponse = await interaction.awaitModalSubmit({
                     filter: (i) =>
                         i.customId === 'a_modal' && i.user.id === interaction.user.id,
-                    time: 900000
+                    time: 300000
                 });
                 if (modalResponse.isModalSubmit()) {
                     const title = modalResponse.fields.getTextInputValue('a_title')
@@ -122,7 +121,7 @@ module.exports = {
                         content: `${context}`,
                         embeds: [Announce_Embed]
                     })
-                }
+                } 
             } catch (error) {
                 const ErrEmbed = new EmbedBuilder()
                     .setColor('DarkButNotBlack')
@@ -131,13 +130,13 @@ module.exports = {
                     .setTitle('<:OrinBruh:1160295126996881448> **Lỗi Submit Modal**')
                     .setDescription('Uhh, Lỗi Submit Modal Rồi, Có 2 Nguyên Nhân Sau:\n1. Hết Giờ Kìa Ba, Nhập Lại Đê :V\n> 2. Lỗi Code, Pha Này Gọi Chủ Bot Lên Nhá :V')
                     .setTimestamp()
-                await interaction.editReply({
+                await interaction.reply({
                     embeds: [ErrEmbed],
                 })
                 console.error(error)
             }
         } else {
-            interaction.editReply({
+            interaction.reply({
                 embeds: [NoPerm]
             })
         }

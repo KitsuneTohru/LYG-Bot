@@ -7,7 +7,7 @@
 > 100% Code Do Tự Tay Orin *(Kitsunezi)* Viết, Có Tham Khảo Nguồn Từ Các Con Bot Khác Và Trên Mạng, Hoàn Toàn **KHÔNG SỬ DỤNG TEMPLATE**
 ## • Mục Đích Sử Dụng:
 - Mục Đích Chính:
-    + Chỉ Là 1 Con Bot Vui Được Tạo Nên Bởi: Orin *(Kitsunezi)*, Dùng Riêng Trong Server, Không Có Mục Đích Cao Cả Gì Hết, Fun Là Chính
+    + Chỉ Là 1 Con Bot Vui Được Tạo Nên Bởi: Orin *(Nekomata Rin)*, Dùng Riêng Trong Server, Không Có Mục Đích Cao Cả Gì Hết, Fun Là Chính
 - Mục Đích Riêng Từ Chủ Bot
     + Thỏa Mãn Sự Hiếu Kì Của Owner Server Lazy Gang Thôi
 
@@ -20,7 +20,7 @@
 ![Img2](https://cdn.discordapp.com/attachments/1098463125268873216/1098468034072563823/Miosha-Credits.png)
 ## • Contributor List:
 - Main Contributor
-    + Orin *(Kitsunezi)*
+    + Orin *(Nekomata Rin)*
 - Co-Contributor
     + Mari Lemon *(Owner LYG)*
 

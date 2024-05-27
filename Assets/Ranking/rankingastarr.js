@@ -7,7 +7,8 @@ const rankingarr = [
         'chen', 'koishi', 'patchouli',
         'shinki', 'aya', 'sakuya', 
         'fubuki', 'tenshi', 'shiroko',
-        'sparkle', 'hoshino'
+        'sparkle', 'hoshino', 'serika',
+        
     ],
     [
         '#FFFFFF', '#FF6366', '#00D309',
@@ -17,7 +18,8 @@ const rankingarr = [
         '#965959', '#75FFC6', '#D490FF',
         '#FFF8F8', '#E55A45', '#bcdada', 
         '#00FFFF', '#64FFF1', '#aff5f6',
-        '#e63333', '#F2ABF5'
+        '#e63333', '#F2ABF5', '#ff7073',
+
     ],
     [
         './Assets/RankCards/RankCard_0.png',
@@ -42,7 +44,9 @@ const rankingarr = [
         './Assets/RankCards/RankCard_19.png',
         './Assets/RankCards/RankCard_20.png',
         './Assets/RankCards/RankCard_21.png',
-        './Assets/RankCards/RankCard_22.png'
+        './Assets/RankCards/RankCard_22.png',
+        './Assets/RankCards/RankCard_23.png',
+
     ],
     [
         'Member - No Title',
@@ -67,7 +71,9 @@ const rankingarr = [
         'Touhou - Hinanawi Tenshi',
         'Abydos - Sunaookami Shiroko',
         'HSR - Sparkle',
-        'Abydos - Takanashi Hoshino'
+        'Abydos - Takanashi Hoshino',
+        'Abydos - Kuromi Serika',
+
     ],
     [
         'https://cdn.discordapp.com/emojis/1097172753985056859.png',
@@ -93,6 +99,8 @@ const rankingarr = [
         'https://cdn.discordapp.com/emojis/1206633868271030332.png',
         'https://cdn.discordapp.com/emojis/1208759255482634311.png',
         'https://cdn.discordapp.com/emojis/1229126728417280050.png',
+        'https://cdn.discordapp.com/emojis/1012752122363785279.png',
+
     ],
     [
         '<:LYG_blank:1097172753985056859>',
@@ -118,6 +126,8 @@ const rankingarr = [
         '<:ShirokoSip:1206633868271030332>',
         '<:SparkleLit:1208759255482634311>',
         '<:HoshinoSleep:1229126728417280050>',
+        '<:SerikaPray:1242841678214205451>',
+
     ],
 ]
 /*rankingarr

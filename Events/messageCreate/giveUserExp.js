@@ -7,6 +7,7 @@ const FooterEmbeds = require('../../Utils/embed')
 const RankingRoles = require('../../Utils/ranking')
 const AchievementList = require('../../Database/achievement')
 const AchievementAssets = require('../../Assets/Achievements/achievements')
+const chalk = require('chalk')
 
 /**
  * 
@@ -34,7 +35,7 @@ module.exports = async (client, message) => {
     if (Date.now() < 1708275600000) {
         xpToGive = Math.floor(Math.random() * 15) + 1
         expCD = 5000
-    }
+    } //Event Exp Lol
 
     const DMUser = message.author
     const WhiteList = WhiteListedChannel
@@ -44,8 +45,6 @@ module.exports = async (client, message) => {
             key = true
     }
     if (key === false) return
-
-
 
     Level.findOne({ UserID: message.author.id, GuildID: message.guild.id }, async (err, data) => {
         if (err) throw err
@@ -109,10 +108,10 @@ module.exports = async (client, message) => {
                     .setFooter({ text: `${FooterEmbeds_[0][0]}`, iconURL: `${FooterEmbeds_[1][Math.floor(Math.random() * FooterEmbeds_[1].length)]}` })
                 try {
                     DMUser.send({
-                        content: `<@${message.member.id}> Thông Báo Nhận Role`, embeds: [BackgroundRequestEmbed]
+                        content: `<@${message.member.id}> Thông Báo Nhận Background`, embeds: [BackgroundRequestEmbed]
                     })
                 } catch (err) {
-                    channel3.send({ content: `<@${message.member.id}> Thông Báo Nhận Role (Vì DMs Của Người Dùng Không Mở)`, embeds: [BackgroundRequestEmbed] })
+                    channel3.send({ content: `<@${message.member.id}> Thông Báo Nhận Background (Vì DMs Của Người Dùng Không Mở)`, embeds: [BackgroundRequestEmbed] })
                 }
             } else if (data.level === 40 && data.titleicon === false) {
                 data.titleicon = true
@@ -125,10 +124,10 @@ module.exports = async (client, message) => {
                     .setFooter({ text: `${FooterEmbeds_[0][0]}`, iconURL: `${FooterEmbeds_[1][Math.floor(Math.random() * FooterEmbeds_[1].length)]}` })
                 try {
                     DMUser.send({
-                        content: `<@${message.member.id}> Thông Báo Nhận Role`, embeds: [TitleIconRequestEmbed]
+                        content: `<@${message.member.id}> Thông Báo Nhận Title Và Icon`, embeds: [TitleIconRequestEmbed]
                     })
                 } catch (err) {
-                    channel4.send({ content: `<@${message.member.id}> Thông Báo Nhận Role (Vì DMs Của Người Dùng Không Mở)`, embeds: [TitleIconRequestEmbed] })
+                    channel4.send({ content: `<@${message.member.id}> Thông Báo Nhận Tilte Và Icon (Vì DMs Của Người Dùng Không Mở)`, embeds: [TitleIconRequestEmbed] })
                 }
             }
             cd.add(message.author.id)
@@ -141,6 +140,8 @@ module.exports = async (client, message) => {
             const restriction = data.restrict || 'Code-0'
             data.restrict = restriction
             data.save()
+            let a = level / 4 - 1
+            //console.log(chalk.cyanBright('[DEBUG]') + message.author.username + `'s Level: ${level}`)
             if (level > 0 && level <= 4) {
                 const role = message.guild.roles.cache.get(RankingRoles[0])
                 if ((level % 4) === 0) {
@@ -152,14 +153,15 @@ module.exports = async (client, message) => {
                 for (var i = 0; i < RankingRoles.length; i++) {
                     var role1 = message.guild.roles.cache.get(RankingRoles[i])
                     var role2 = message.guild.roles.cache.get(RankingRoles[i + 1])
-
-                    if (((level / 4) - 1) === RankingRoles.indexOf(RankingRoles[i + 1]) && level <= RankingRoles.length * 3) {
-                        if (!message.member.roles.cache.has(RankingRoles[i + 1])) {
+                    let key = Number(a) === Number(RankingRoles.indexOf(RankingRoles[i + 1])) && level <= 48
+                    //console.log(chalk.cyanBright('[DEBUG]') + chalk.redBright(role1) + ' ' + chalk.greenBright(role2) + ' ' + a + ' ' + RankingRoles.indexOf(RankingRoles[i + 1]) + ' ' + key)
+                    if (key) {
+                        if (!message.member.roles.cache.has(role2)) {
                             message.member.roles.add(role2)
                             message.member.roles.remove(role1)
                             break
                         }
-                        if (message.member.roles.cache.has(RankingRoles[i]) && level < 48) {
+                        if (message.member.roles.cache.has(role1) && level < 48) {
                             message.member.roles.remove(role1)
                             break
                         }
